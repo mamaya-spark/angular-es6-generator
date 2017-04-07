@@ -1,0 +1,15 @@
+{
+  "name": "angular-es6-generator",
+  "version": "1.0.0",
+  "description": "A generator for creating Angular ES6 apps with ease.",
+  "main": "index.js",
+  "repository": "https://github.com/mamaya-spark/angular-es6-generator.git",
+  "author": "mamaya-spark <mamaya@sparkcognition.com>",
+  "license": "ISC",
+  "bin": {
+    "ng": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
