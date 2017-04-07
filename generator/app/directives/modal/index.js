@@ -1,9 +1,13 @@
-//* *************** *//
-//* MODAL DIRECTIVE *//
-//* *************** *//
+//* ************************************************************************ *//
+//* MODAL DIRECTIVE                                                          *//
+//* Definition for the <modal> directive.                                    *//
+//* - To be used when the app needs a modal.                                 *//
+//* ************************************************************************ *//
 
+//* Import <modal> styles
 import './modal.scss';
 
+//* Define <modal> tag
 function ModalDirective() {
     return {
         restrict: 'E',

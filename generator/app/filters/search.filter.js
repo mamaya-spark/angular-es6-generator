@@ -1,6 +1,7 @@
-//* ************* *//
-//* SEARCH FILTER *//
-//* ************* *//
+//* ************************************************************************ *//
+//* SEARCH FILTER                                                            *//
+//* A filter for searching an array of objects based on a query.             *//
+//* ************************************************************************ *//
 
 function searchFilter(lodash) {
     'ngInject';

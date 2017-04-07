@@ -1,0 +1,31 @@
+//* ************************************************************************ *//
+//* GLOBAL STYLES                                                            *//
+//* Global application styles defined here. Refrain from modifying this file *//
+//* unless there is strong reason to.                                        *//
+//* ************************************************************************ *//
+
+//* Import vendor stylesheets
+@import "~normalize.css/normalize.css";
+
+//* Import base files
+@import "./_fontface.scss";
+@import "./_variables.scss";
+@import "./_helpers.scss";
+
+//* Define page styles
+body {
+    @include font-smoothing;
+    font-family: $font-roboto-stack;
+    font-size: $font-size-start;
+    background-color: $color-black;
+    color: $color-text-secondary;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.page {
+    position: relative;
+    height: 100vh;
+}

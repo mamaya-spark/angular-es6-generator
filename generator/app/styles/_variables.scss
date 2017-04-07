@@ -1,0 +1,90 @@
+//* ************************************************************************ *//
+//* VARIABLES                                                                *//
+//* Declare all variables used throughout the application here.              *//
+//* ************************************************************************ *//
+
+
+//==  PAGE DIMENSIONS
+
+$font-size-start: 16px;
+$page-min-width: 1000px;
+$border-radius: 2px;
+$border-width: 3px;
+
+//==  COMPONENT DIMENSIONS
+
+$header-height: 50px;
+$sidebar-width: 180px;
+
+//==  PADDING DIMENSIONS
+//==  - use 'box' padding when needing space from a <div>
+//==  - use 'text' padding when needing space from text
+
+$padding-text:   8px;
+$padding-box-xs: 5px;
+$padding-box-sm: 10px;
+$padding-box-md: 15px;
+$padding-box-lg: 20px;
+$padding-box-xl: 30px;
+
+//==  ANIMATION DIMENSIONS
+
+$animation-duration: 200ms;
+
+//==  FORM INPUT DIMENSIONS
+
+$input-height: 36px;
+$input-width:  180px;
+$btn-height:   36px;
+$btn-width:    150px;
+
+
+//==  COLOR PALETTE
+//==  Colors are named using the same naming conventions as Google's Material Design
+//==  color palette: <https://material.io/guidelines/style/color.html#color-color-palette>
+
+//==  Main Colors
+//==  Every application will have a primary color and an accent color.
+//==  These colors will vary in shades from 100 to 900 (light to dark).
+//==  Not all shades have to be used.
+
+$palette-primary-100: gray;
+$palette-primary-200: gray;
+$palette-primary-300: gray;
+$palette-primary-400: gray;
+$palette-primary-500: gray;
+$palette-primary-600: gray;
+$palette-primary-700: gray;
+$palette-primary-800: gray;
+$palette-primary-900: gray;
+
+$palette-accent-100: pink;
+$palette-accent-200: pink;
+$palette-accent-300: pink;
+$palette-accent-400: pink;
+$palette-accent-500: pink;
+$palette-accent-600: pink;
+$palette-accent-700: pink;
+$palette-accent-800: pink;
+$palette-accent-900: pink;
+
+//==  Other Colors
+//==  Colors that are not primary or accent colors are defined here.
+//==  Their naming convention is: $color-<name>
+
+$color-black: #000;
+$color-white: #fff;
+
+//==  Text Colors
+//==  Colors for text are defined here.
+//==  Different shades for text can be achieved by setting its alpha channel (rgba).
+
+$color-text:           #fff;
+$color-text-secondary: rgba($color-text, 0.7);
+$color-text-disabled:  rgba($color-text, 0.5);
+$color-text-dividers:  rgba($color-text, 0.12);
+
+//==  Font Stack
+//==  Define any font stacks here
+
+$font-roboto-stack: 'Roboto', 'Helvetica', 'Arial', sans-serif;

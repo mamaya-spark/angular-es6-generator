@@ -1,6 +1,7 @@
-//* **************** *//
-//* CSRF INTERCEPTOR *//
-//* **************** *//
+//* ************************************************************************ *//
+//* CSRF INTERCEPTOR                                                         *//
+//* An interceptor for handling CSRF tokens.                                 *//
+//* ************************************************************************ *//
 
 function csrfInterceptor(csrfService) {
     'ngInject';

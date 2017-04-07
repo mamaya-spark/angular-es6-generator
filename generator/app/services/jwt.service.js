@@ -1,3 +1,8 @@
+//* ************************************************************************ *//
+//* JWT SERVICE                                                              *//
+//* A service for handling the retrieval/removal of jwt tokens.              *//
+//* ************************************************************************ *//
+
 export default class jwtService {
     constructor(AppConstants, $cookies) {
         'ngInject';

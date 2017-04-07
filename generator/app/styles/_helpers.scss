@@ -1,0 +1,117 @@
+//* ************************************************************************ *//
+//* HELPERS                                                                  *//
+//* Define any mixins, animations, or helper classes used throughout the     *//
+//* application here.                                                        *//
+//* ************************************************************************ *//
+
+
+//==  MIXINS
+//==  usage: @include <mixin-name>(<params>);
+
+//- a mixin for font smoothing styles
+@mixin font-smoothing {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialised;
+}
+
+//- a mixin for scrollbar styles
+@mixin scrollbar($bar-width, $track-color, $thumb-color) {
+    &::-webkit-scrollbar {
+       width: $bar-width;
+   }
+
+   &::-webkit-scrollbar-track {
+       background-color: $track-color;
+   }
+
+   &::-webkit-scrollbar-thumb {
+       background-color: $thumb-color;
+   }
+}
+
+//- a mixin for displaying ellipsis
+@mixin ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+//- a mixin for a fading effect on a button
+@mixin btn-fade($bg-color:gray, $percent:0.2) {
+    background: fade-out($bg-color, $percent);
+
+    &:hover {
+        background-color: $bg-color;
+    }
+}
+
+//- a mixin for centering a div
+@mixin center {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+}
+
+
+//==  ANIMATIONS
+//==  usage: animation: <name> <duration> <timing-function> <delay> <iteration-count> <direction>;
+//==    - name: name of the keyframe
+//==    - duration: in seconds/milliseconds
+//==    - timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int, start|end)|cubic-bezier(n,n,n,n)
+//==    - delay: in seconds/milliseconds
+//==    - iteration-count: how many times an animation should be played
+//==    - direction: normal|reverse|alternate|alternate-reverse
+
+@keyframes spin {
+    from   { transform: rotate(0deg);   }
+    to     { transform: rotate(360deg); }
+}
+
+@keyframes horizontal-fill {
+    from   { width: 0%;   }
+    to     { width: 100%; }
+}
+
+
+//== HELPER CLASSES
+//== usage: re-use these classes to give default stylings to recurring elements
+
+.title {
+    color: $color-text;
+    text-transform: uppercase;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+input {
+    color: $color-text-secondary;
+    background-color: transparent;
+    border-radius: $border-radius;
+    border: 0;
+    outline: 0;
+    height: $input-height;
+    width: $input-width;
+}
+
+.btn {
+    color: $color-text;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    border: 0;
+    cursor: pointer;
+    height: $btn-height;
+    width: $btn-width;
+    transition: all $animation-duration;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: none;
+}

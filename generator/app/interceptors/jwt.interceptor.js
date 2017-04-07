@@ -1,6 +1,7 @@
-//* *************** *//
-//* JWT INTERCEPTOR *//
-//* *************** *//
+//* ************************************************************************ *//
+//* JWT INTERCEPTOR                                                          *//
+//* An interceptor for handling jwt authentication tokens.                   *//
+//* ************************************************************************ *//
 
 function jwtInterceptor(jwtService) {
     'ngInject';
