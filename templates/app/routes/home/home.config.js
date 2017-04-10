@@ -5,7 +5,7 @@
 //* ************************************************************************ *//
 
 //* Import 'home' styles
-import ('./home.scss');
+import './home.scss';
 
 //* Import 'home' controller
 import HomeController from './home.controller';

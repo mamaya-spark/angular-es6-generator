@@ -8,12 +8,12 @@ let ComponentsModule = angular.module(
 );
 
 //* Import components
-import HeaderComponent from './header';
+import BannerComponent from './banner';
 import SidebarComponent from './sidebar';
 
 //* Register components
 ComponentsModule
-    .component('header', HeaderComponent)
+    .component('banner', BannerComponent)
     .component('sidebar', SidebarComponent);
 
 export default ComponentsModule;

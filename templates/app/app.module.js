@@ -1,9 +1,9 @@
 //* ************************************************************************ *//
 //* ANGULAR APP MODULE                                                       *//
-//* Set up, create, and bootstrap the application.                           *//
+//* Configure, create, and bootstrap the application.                        *//
 //* ************************************************************************ *//
 
-//* Import global stylings
+//* Import global app stylings
 import './styles/global.scss';
 
 //* Import app configs
@@ -15,7 +15,6 @@ import AppRun from './config/app.run';
 import './components';
 import './directives';
 import './filters';
-import './interceptors';
 import './routes';
 import './services';
 
@@ -23,6 +22,7 @@ import './services';
 const requires = [
     //- vendors
     'ui.router',
+    'ngCookies',
     'ngAnimate',
     'ngLodash',
     'nvd3',
@@ -31,7 +31,6 @@ const requires = [
     'app.components',
     'app.directives',
     'app.filters',
-    'app.interceptors',
     'app.routes',
     'app.services'
 ];

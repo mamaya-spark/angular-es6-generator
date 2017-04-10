@@ -5,21 +5,21 @@
 
 
 //==  PAGE DIMENSIONS
+//==  Try to capture variables that will make styling the app easier.
 
+//== App Dimensions
 $font-size-start: 16px;
 $page-min-width: 1000px;
 $border-radius: 2px;
 $border-width: 3px;
 
-//==  COMPONENT DIMENSIONS
-
+//==  Component Dimensions
 $header-height: 50px;
 $sidebar-width: 180px;
 
-//==  PADDING DIMENSIONS
+//==  Padding Dimensions
 //==  - use 'box' padding when needing space from a <div>
 //==  - use 'text' padding when needing space from text
-
 $padding-text:   8px;
 $padding-box-xs: 5px;
 $padding-box-sm: 10px;
@@ -27,12 +27,10 @@ $padding-box-md: 15px;
 $padding-box-lg: 20px;
 $padding-box-xl: 30px;
 
-//==  ANIMATION DIMENSIONS
-
+//==  Animation Dimensions
 $animation-duration: 200ms;
 
-//==  FORM INPUT DIMENSIONS
-
+//==  Form Input Dimensions
 $input-height: 36px;
 $input-width:  180px;
 $btn-height:   36px;
