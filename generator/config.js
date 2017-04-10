@@ -12,7 +12,8 @@ module.exports = {
             if(err) {
                 q.reject(new Error(err));
             } else {
-                config.PATH_TO_PROJECT = PATH_TO_DIR;
+                config.PATH_TO_PROJECT   = PATH_TO_DIR;
+                config.PATH_TO_TEMPLATES = path.join(__dirname, '..', 'templates');
 
                 logger.info('Set project directory to:', config.PATH_TO_PROJECT + '\n');
 

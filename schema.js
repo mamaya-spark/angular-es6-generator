@@ -42,31 +42,47 @@ module.exports = {
             }
         }
     },
-    createApp() {
+    createApp(appName) {
         const description = {
-            appName: '',
-            apiAddress: '',
-            socketAddress: '',
-            csrfKey: '',
-            jwtKey: ''
+            appName: 'App name'.gray,
+            apiAddress: 'API address'.gray,
+            socketAddress: 'Socket server address'.gray,
+            csrfKey: 'CSRF cookie'.gray,
+            jwtKey: 'JWT cookie'.gray
         }
+        const message = "Expecting a 'http://' address.\n";
+        const appNameDefault = appName || 'app';
 
         return {
             properties: {
                 appName: {
-
+                    description: description.appName,
+                    type: 'string',
+                    default: appNameDefault
                 },
                 apiAddress: {
-
+                    description: description.apiAddress,
+                    type: 'string',
+                    pattern: /^http/,
+                    message,
+                    default: 'http://localhost:3000/api'
                 },
                 socketAddress: {
-
+                    description: description.socketAddress,
+                    type: 'string',
+                    pattern: /^http/,
+                    message,
+                    default: `http://localhost:3000/${appNameDefault}`
                 },
                 csrfKey: {
-
+                    description: description.csrfKey,
+                    type: 'string',
+                    default: 'csrftoken'
                 },
                 jwtKey: {
-
+                    description: description.jwtKey,
+                    type: 'string',
+                    default: `${appNameDefault}.jwt`
                 }
             }
         }

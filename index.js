@@ -29,7 +29,7 @@ program
             Generator.config.setDir(dir)
                 .then(function() {
                     //- generate new app
-                    Generator.ng.app();
+                    Generator.ng.app(appName);
                 });
 
         } else {

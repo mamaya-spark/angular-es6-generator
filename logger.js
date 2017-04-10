@@ -7,6 +7,12 @@ module.exports = {
         console.log(prompt_cyan, message);
     },
 
+    success(message) {
+        let message_green = message.green;
+
+        console.log(message_green);
+    },
+
     error(message) {
         let message_magenta = message.magenta;
 

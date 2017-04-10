@@ -12,6 +12,7 @@
   "dependencies": {
     "colors": "^1.1.2",
     "commander": "^2.9.0",
+    "copy-dir": "^0.3.0",
     "jsonfile": "^2.4.0",
     "prompt": "^1.0.0",
     "q": "^1.5.0"
