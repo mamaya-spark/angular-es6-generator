@@ -4,6 +4,7 @@ const Q              = require('q');
 const prompt         = require('prompt');
 const copydir        = require('copy-dir');
 const schema         = require('../schema');
+const util           = require('../util');
 const logger         = require('../logger');
 const PATH_TO_CONFIG = path.join(__dirname, '..', 'config.json');
 
@@ -70,27 +71,96 @@ module.exports = {
         });
     },
 
-    component() {
-        console.log('generate a new component');
+    component(name) {
+        prompt.start();
+
+        //- prompt user for component constants
+        prompt.get(schema.createComponent(name), (err, result) => {
+            const component_name = {
+                uppercase:  util.uppercase(result.name),
+                lowercase:  util.lowercase(result.name),
+                capitalize: util.capitalize(result.name),
+                underscore: util.underscore(result.name),
+            }
+
+            console.log('name:', component_name);
+        });
     },
 
-    directive() {
-        console.log('generate a new directive');
+    directive(name) {
+        prompt.start();
+
+        //- prompt user for directive constants
+        prompt.get(schema.createDirective(name), (err, result) => {
+            const directive_name = {
+                uppercase:  util.uppercase(result.name),
+                lowercase:  util.lowercase(result.name),
+                capitalize: util.capitalize(result.name),
+            }
+
+            console.log('name:', directive_name);
+        });
     },
 
-    filter() {
-        console.log('generate a new filter');
+    filter(name) {
+        prompt.start();
+
+        //- prompt user for filter constants
+        prompt.get(schema.createFilter(name), (err, result) => {
+            const filter_name = {
+                uppercase: util.uppercase(result.name),
+                lowercase: util.lowercase(result.name),
+                camelcase: util.camelCase(result.name),
+            }
+
+            console.log('name:', filter_name);
+        });
     },
 
-    interceptor() {
-        console.log('generate a new interceptor');
+    interceptor(name) {
+        prompt.start();
+
+        //- prompt user for interceptor constants
+        prompt.get(schema.createInterceptor(name), (err, result) => {
+            const interceptor_name = {
+                uppercase: util.uppercase(result.name),
+                lowercase: util.lowercase(result.name),
+                camelcase: util.camelCase(result.name),
+            }
+
+            console.log('name:', interceptor_name);
+        });
     },
 
-    route() {
-        console.log('generate a new route');
+    route(state) {
+        prompt.start();
+
+        //- prompt user for route constants
+        prompt.get(schema.createRoute(state), (err, result) => {
+            const state_name = {
+                uppercase:     util.uppercase(result.state),
+                lowercase:     util.lowercase(result.state),
+                lowercaseDash: util.transform(util.lowercase(result.state)),
+                capitalize:    util.capitalize(result.state, { delimiter: '.' }),
+                underscore:    util.underscore(result.state, { delimiter: '.' }),
+            }
+
+            console.log('name:', state_name);
+        });
     },
 
-    service() {
-        console.log('generate a new service');
+    service(name) {
+        prompt.start();
+
+        //- prompt user for service constants
+        prompt.get(schema.createService(name), (err, result) => {
+            const service_name = {
+                uppercase: util.uppercase(result.name),
+                lowercase: util.lowercase(result.name),
+                camelcase: util.camelcase(result.name),
+            }
+
+            console.log('name:', service_name);
+        });
     }
 }

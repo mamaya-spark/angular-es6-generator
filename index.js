@@ -14,7 +14,7 @@ program
     .option('-d, --directive <directive-name>', 'generate a new app directive')
     .option('-f, --filter <filter-name>', 'generate a new app filter')
     .option('-i, --interceptor <interceptor-name>', 'generate a new app interceptor')
-    .option('-r, --route <route-name>', 'generate a new app route')
+    .option('-r, --route <state>', 'generate a new app route')
     .option('-s, --service <service-name>', 'generate a new app service');
 
 program
@@ -78,28 +78,27 @@ if(commands.length && commands[0] !== 'init') {
             //- case: the app has already been initialized
             if(isInit) {
                 if(program.component) {
-                    console.log('component:', program.component);
-                    Generator.ng.component();
+                    Generator.ng.component(program.component);
                 }
 
                 if(program.directive) {
-                    Generator.ng.directive();
+                    Generator.ng.directive(program.directive);
                 }
 
                 if(program.filter) {
-                    Generator.ng.filter();
+                    Generator.ng.filter(program.filter);
                 }
 
                 if(program.interceptor) {
-                    Generator.ng.interceptor();
+                    Generator.ng.interceptor(program.interceptor);
                 }
 
                 if(program.route) {
-                    Generator.ng.route();
+                    Generator.ng.route(program.route);
                 }
 
                 if(program.service) {
-                    Generator.ng.service();
+                    Generator.ng.service(program.service);
                 }
 
             //- case: the app has yet to be initialized
@@ -112,9 +111,9 @@ if(commands.length && commands[0] !== 'init') {
                 prompt.get(schema.shouldSetDir(), function(err, result) {
                     if(result.shouldSetDir) {
                         //- prompt user for the directory path
-                        prompt.get(schema.pathToApp(), function(err, result) {
+                        prompt.get(schema.pathToDir(), function(err, result) {
                             //- set project directory
-                            Generator.config.setDir(result.pathToApp)
+                            Generator.config.setDir(result.pathToDir)
                                 .then(function() {
                                     //- generate new app
                                     Generator.ng.app();

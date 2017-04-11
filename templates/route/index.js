@@ -5,7 +5,7 @@
 //* ************************************************************************ *//
 
 //* Import '<name-lowercase>' config
-import <name-captialize>Config from './<name-lowercase>.config';
+import <name-capitalize>Config from './<name-lowercase>.config';
 
 //* Define '<name-lowercase>' module
 let <name-capitalize>Module = angular.module(
