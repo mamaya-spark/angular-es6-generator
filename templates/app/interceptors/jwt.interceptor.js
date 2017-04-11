@@ -8,7 +8,7 @@ function jwtInterceptor(jwtService) {
 
     return {
         //* Send jwt as a Bearer token on every request
-        request: function(config) {
+        request(config) {
             config.headers['Authorization'] = `Bearer ${jwtService.get()}`;
             return config;
         }

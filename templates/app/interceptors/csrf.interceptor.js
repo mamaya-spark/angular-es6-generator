@@ -8,7 +8,7 @@ function csrfInterceptor(csrfService) {
 
     return {
         //* Send CSRF token on every request
-        request: function(config) {
+        request(config) {
             config.headers['X-CSRFToken'] = csrfService.get();
             return config;
         }
